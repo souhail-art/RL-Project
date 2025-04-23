@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "chrome-dino-game-rl"
+version = "0.1.0"
+description = "Play Chrome's Dinosuar Game with Reinforcement Learning"
+authors = ["Thang Pham <phamducthang1234@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.*"
+gymnasium = "^0.28.1"
+pygame = "^2.4.0"
+torch = "^2.0.1"
+torchvision = "^0.15.2"
+matplotlib = "^3.7.1"
+tqdm = "^4.65.0"
+
+[tool.pyright]
+venvPath = "/Users/aome510/Library/Caches/pypoetry/virtualenvs/"
+venv = "chrome-dino-game-rl-I4G6ctY3-py3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
