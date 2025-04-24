@@ -156,3 +156,6 @@ python play.py ai -m ppov2.pth # Pour lancer le jeu avec PPO optimisé pour avec
 python play.py ai -m a2c.pth  # Pour lancer le jeu avec A2C pour avec la vitesse initial de l'env égale à 20
 python play.py ai -m a2cv2.pth  # Pour lancer le jeu avec A2C pour avec la vitesse initial de l'env égale à 40
 ```
+---
+**Sources:**
+Lien vers l'environnement pygame : https://github.com/MaxRohowsky/chrome-dinosaur 
