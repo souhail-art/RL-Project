@@ -72,7 +72,7 @@ La **difficulté augmente** dynamiquement avec le temps (vitesse accrue).
 5. 🔗 Utilisation de `.detach()` sur `next_state` pour éviter les calculs de gradients inutiles
 
 ![Demo du jeu](ppo_optimized.gif)
-![metrics](results\ppo\metrics_plot.png)
+![metrics](results/ppo/metrics_plot.png)
 
 ---
 
@@ -94,7 +94,7 @@ La **difficulté augmente** dynamiquement avec le temps (vitesse accrue).
   - `Entropy penalty`
 
 ![Demo du jeu](a2c.gif)
-![metrics](results\25-04-22-23-32\metrics_plot.png)
+![metrics](results/25-04-22-23-32/metrics_plot.png)
 
 ---
 
@@ -136,14 +136,23 @@ Dans notre expérimentation, nous avons également modifié les **paramètres de
 ```bash
 git clone https://github.com/ton-utilisateur/chrome-dino-rl.git
 cd chrome-dino-rl
+```
 
 2. Installer les dépendances :
 
+```bash
 pip install -r requirements.txt
+```
 
 3. Lancer un agent :
 
-python main_dqn.py    # Pour entraîner avec DQN
-python main_ppo.py    # Pour entraîner avec PPO
-python main_a2c.py    # Pour entraîner avec A2C
+```bash
+python play.py human #Pour lancer le jeu jouable avec le calvier
+python play.py ai -m dqn.pth  # Pour lancer le jeu avec DQN pour avec la vitesse initial de l'env égale à 20
+python play.py ai -m dqnv2.pth  # Pour lancer le jeu avec DQN pour avec la vitesse initial de l'env égale à 40
+python play.py ai -m ppo.pth # Pour lancer le jeu avec PPO non optimisé pour avec la vitesse initial de l'env égale à 20
+python play.py ai -m ppoSlowEnv.pth # Pour lancer le jeu avec PPO optimisé pour avec la vitesse initial de l'env égale à 20
+python play.py ai -m ppov2.pth # Pour lancer le jeu avec PPO optimisé pour avec la vitesse initial de l'env égale à 40
+python play.py ai -m a2c.pth  # Pour lancer le jeu avec A2C pour avec la vitesse initial de l'env égale à 20
+python play.py ai -m a2cv2.pth  # Pour lancer le jeu avec A2C pour avec la vitesse initial de l'env égale à 40
 ```
